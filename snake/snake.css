@@ -1,0 +1,7 @@
+.row{
+  clear: both;
+}
+
+.cell, .apple{
+  float: left;  
+}

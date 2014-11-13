@@ -1,0 +1,22 @@
+#board{
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+  line-height: 450px;
+  font-size: 110px;
+}
+
+.row div{
+  float: left;
+  border: 1px solid black;
+}
+
+.row{
+  clear: both;
+}
+
+.cell{
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+}
