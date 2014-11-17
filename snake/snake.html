@@ -1,7 +1,8 @@
 <html>
 <head>
   <script src="./snake.js"></script> 
-  <script src="./board.js"></script> 
+  <script src="./board.js"></script>
+  <script src="./snake-view.js"></script>  
   <script src="./jquery-2.1.1.js"></script> 
   <link rel="stylesheet" type="text/css" href="./snake.css"> 
 </head>
@@ -10,7 +11,8 @@
     
     <script>
     var $el = $("div#board");
-    var board = new SnakeGame.Board($el);
+    var board = new SnakeGame.SnakeView($el);
+    // var board = new SnakeGame.Board($el);
     </script>
   </body>
 </html>

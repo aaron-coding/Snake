@@ -5,3 +5,17 @@
 .cell, .apple{
   float: left;  
 }
+
+.cell {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+}
+
+.snake {
+  background-color: green;
+}
+
+.apple {
+  background-color: red;
+}
