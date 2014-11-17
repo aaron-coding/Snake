@@ -4,19 +4,19 @@
   }
   
   var Board = SnakeGame.Board = function Board($el){
-    this.$el = $el
+    this.$el = $el;
     this.apple = this.randomPos();
     this.snake = new SnakeGame.Snake(this);
     this.render();
    };
    
    Board.prototype.randomPos = function(){
-      return [Math.floor(Math.random() * 25), Math.floor(Math.random() * 25)]
-   }
+     return [Math.floor(Math.random() * 25), Math.floor(Math.random() * 25)];
+   };
    
    Board.prototype.replaceApple = function() {
      this.apple = this.randomPos();
-   }
+   };
    
    Board.prototype.render = function(){
      var $megaString = "";
@@ -33,11 +33,11 @@
      }
 
      $megaString = $($megaString);
-     for (var i = 0; i < this.snake.segments.length; i++) {
+     for (i = 0; i < this.snake.segments.length; i++) {
        var $snakeToBe = $megaString.find("[data-pos='" + this.snake.segments[i][0] + "," + this.snake.segments[i][1] + "']");
        $snakeToBe.addClass("snake");
        } 
      $el.html($megaString);
-   }
+   };
 
 })();
