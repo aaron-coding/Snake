@@ -1,3 +1,6 @@
+h1, h3, p {
+  margin: 5px 0px;
+}
 .row{
   clear: both;
 }
@@ -9,7 +12,7 @@
 .cell {
   height: 20px;
   width: 20px;
-  border: 1px solid black;
+/*  border: 1px solid black; //enable this to add cell boxes */ 
 }
 
 .snake {
@@ -18,4 +21,17 @@
 
 .apple {
   background-color: red;
+}
+
+#board{
+  display: inline-block;
+  border: 1px blue solid;
+  position: absolute;
+  left: 200px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
 }

@@ -4,6 +4,7 @@
     window.SnakeGame = {};
   }
  var Snake = SnakeGame.Snake = function Snake(board) {
+    this.score = 0
     this.dir = "N";
     this.segments = [[12, 12], [11, 12], [10, 12]];
     this.board = board;
@@ -44,7 +45,7 @@
       }
     }
     
-    if ((newHead[0] > 25 || newHead[0] < 0) || (newHead[1] > 25 || newHead[1] < 0) ) {
+    if ((newHead[0] >= 25 || newHead[0] < 0) || (newHead[1] >= 25 || newHead[1] < 0) ) {
       this.segments = [];
       // alert("Game Over, you crossed the border");
     }
@@ -53,6 +54,8 @@
   Snake.prototype.eatApple = function() {
     if (this.head[0] == this.board.apple[0] && this.head[1] == this.board.apple[1]) {
       this.board.replaceApple();
+      this.score += 1
+      $("#score").html(this.score)
       return true;
     } else {
       return false;
@@ -63,6 +66,7 @@
     if (this.isOppositeDir(input) === true) {
       return;
     }
+    event.preventDefault(); //stop movement of screen with arrow keys
     switch (input) {
     case 38:  // for up arrow
     case 87:  // for "w"

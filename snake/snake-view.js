@@ -7,7 +7,7 @@
     this.$el = $el;
     this.board = new SnakeGame.Board($el);
     this.bindEvents();
-    this.intervalID = window.setInterval(this.step.bind(this), 150);
+    this.intervalID = window.setInterval(this.step.bind(this), 100);
     
   };
   
