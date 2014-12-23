@@ -24,7 +24,7 @@
     this.board.snake.move();
     this.board.render();
     if (this.board.snake.segments.length < 1) {
-      alert("Game Over.")
+      $(".lose-message").addClass("show");
       window.clearInterval(this.intervalID); 
     }
   };

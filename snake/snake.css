@@ -37,3 +37,15 @@ h1, h3, p {
   text-align: center;
   min-width: 502px;
 }
+
+.lose-message.show {
+  display:block;
+}
+
+.lose-message{
+  display: none;
+  position: relative;
+  top: 350px;
+  font-size: 20px;
+  font-weight: bold; 
+}

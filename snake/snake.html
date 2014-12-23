@@ -8,17 +8,17 @@
 </head>
   <body>
     <div class="wrapper">
+      <div class="lose-message">Game Over. <br> Press "R" to try again! </div>
       <h1> Snake </h1>
       <h3>Score: <span id="score">0</span></h3>
       <p>Move with "WASD" keys or Arrow Keys. Eat the apples!</p>
-            <div id="board"></div>
+      <div id="board"></div>
     </div>
 
 
     <script>
     var $el = $("div#board");
     var board = new SnakeGame.SnakeView($el);
-    // var board = new SnakeGame.Board($el);
     </script>
   </body>
 </html>

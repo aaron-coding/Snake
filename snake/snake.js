@@ -41,13 +41,11 @@
     for (var i = 0; i < this.segments.length; i++) {
       if (this.segments[i][0] === newHead[0] && this.segments[i][1] === newHead[1]) {
         this.segments = [];
-        // alert("Game Over.");
       }
     }
     
     if ((newHead[0] >= 25 || newHead[0] < 0) || (newHead[1] >= 25 || newHead[1] < 0) ) {
       this.segments = [];
-      // alert("Game Over, you crossed the border");
     }
   };
   
@@ -66,11 +64,11 @@
     if (this.isOppositeDir(input) === true) {
       return;
     }
- //stop movement of screen with arrow keys
+
     switch (input) {
     case 38:  // for up arrow
     case 87:  // for "w"
-      event.preventDefault();
+      event.preventDefault();  //stop movement of screen with arrow keys
       this.dir = "N"; // North
       break;
     case 39:  //for right arrow
@@ -87,6 +85,9 @@
     case 65:  // for "A"
       event.preventDefault();
       this.dir = "W"; // West
+      break;
+    case 82:
+      location.reload(); //Refresh the page if user presses "r"
       break;
     }
   };
