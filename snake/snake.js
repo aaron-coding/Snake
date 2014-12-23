@@ -66,22 +66,26 @@
     if (this.isOppositeDir(input) === true) {
       return;
     }
-    event.preventDefault(); //stop movement of screen with arrow keys
+ //stop movement of screen with arrow keys
     switch (input) {
     case 38:  // for up arrow
     case 87:  // for "w"
+      event.preventDefault();
       this.dir = "N"; // North
       break;
     case 39:  //for right arrow
     case 68:  // or "D"
+      event.preventDefault();
       this.dir = "E"; // East 
       break;
     case 40:  // for down arrow
     case 83:  // or "S"
+      event.preventDefault();
       this.dir = "S"; // South
       break;
     case 37:  // for left arrow
     case 65:  // for "A"
+      event.preventDefault();
       this.dir = "W"; // West
       break;
     }
