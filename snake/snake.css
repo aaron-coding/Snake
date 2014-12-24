@@ -39,13 +39,14 @@ h1, h3, p {
 }
 
 .lose-message.show {
-  display:block;
+  visibility: visible;
 }
 
 .lose-message{
-  display: none;
+  visibility: hidden;
   position: relative;
-  top: 350px;
+  top: 325px;
   font-size: 20px;
   font-weight: bold; 
+  margin-top: -40px;
 }
